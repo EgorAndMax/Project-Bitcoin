@@ -63,7 +63,7 @@
                     <ImageBrush ImageSource="bitcoin2.jpg" Stretch="UniformToFill" />
                 </HubSection.Background>
             </HubSection>
-            <HubSection Width="500">
+            <HubSection Width="500" FontSize="14.667">
                 <DataTemplate>
                     <Grid Height="459">
                         <Grid.RowDefinitions>
@@ -72,9 +72,29 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
-                        
-                        <TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Grid.Row="1" Margin="0,10,0,0" TextWrapping="Wrap"  
-                                   Text="Bitcoin - Биткоин (BTC) является уникальным феноменом в экономическом мире. Его появление способно полностью изменить финансовую модель современного общества."/>
+
+                        <RichTextBlock Style="{StaticResource BaseRichTextBlockStyle}" Grid.Row="1" Margin="0, 10, 0, 0">
+                            <Paragraph FontSize="19" FontFamily="Georgia" >
+                                <Run Text="Биткоин - это цифровая валюта, протокол и программное обеспечение, которые включают в себя"/>
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph FontSize="19" FontFamily="Georgia" >
+                                <Run Text="• Мгновенные P2P транзакции"/>
+                            </Paragraph>
+                            <Paragraph FontSize="19" FontFamily="Georgia">
+                                <Run Text="• Платежи по всему миру"/>
+                            </Paragraph>
+                            <Paragraph FontSize="19" FontFamily="Georgia">
+                                <Run  Text="• Низкую / нулевую стоимость обработки   транзакций"/>
+                            </Paragraph>
+                            <Paragraph FontSize="19" FontFamily="Georgia">
+                                <Run Text="• И многое другое"/>
+                            </Paragraph>
+                            <Paragraph></Paragraph>
+                            <Paragraph FontSize="19" FontFamily="Georgia">
+                                <Run Text="Bitcoin использует P2P технологию, функционирующую без центрального контролирующего органа или банка; обработка транзакций и эмиссия производятся коллективно, усилиями сети. Bitcoin имеет открытый код; его устройство открыто всем, никто не владеет и не контролирует Bitcoin. Благодаря своим уникальным свойствам, Bitcoin открывает новые горизонты возможностей, которые не предоставляла до этого ни одна платежная система."/>
+                            </Paragraph>
+                        </RichTextBlock>
                         
                     </Grid>
                 </DataTemplate>

@@ -14,78 +14,78 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-02-13T15:17:58.296</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
       <PackagePath>Bitcoin.exe</PackagePath>
-      <Modified>2014-02-13T15:17:56.260</Modified>
+      <Modified>2014-02-15T07:35:08.757</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\images.jpg">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\images.jpg">
       <PackagePath>images.jpg</PackagePath>
       <Modified>2014-02-12T14:30:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\bitcoin2.jpg">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bitcoin2.jpg">
       <PackagePath>bitcoin2.jpg</PackagePath>
       <Modified>2014-02-12T13:55:03.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\DataModel\SampleData.json">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\DataModel\SampleData.json">
       <PackagePath>DataModel\SampleData.json</PackagePath>
       <Modified>2014-02-12T12:29:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-23T02:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-23T02:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-23T02:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-23T02:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\Assets\LightGray.png">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\LightGray.png">
       <PackagePath>Assets\LightGray.png</PackagePath>
       <Modified>2013-07-23T02:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\Assets\MediumGray.png">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\MediumGray.png">
       <PackagePath>Assets\MediumGray.png</PackagePath>
       <Modified>2013-07-23T02:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\Assets\DarkGray.png">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\DarkGray.png">
       <PackagePath>Assets\DarkGray.png</PackagePath>
       <Modified>2013-07-23T02:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
       <Modified>2014-02-13T15:17:55.517</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-02-13T15:17:55.518</Modified>
+      <Modified>2014-02-15T07:35:08.377</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
       <PackagePath>SectionPage.xbf</PackagePath>
       <Modified>2014-02-13T15:17:55.518</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf">
       <PackagePath>ItemPage.xbf</PackagePath>
       <Modified>2014-02-13T15:17:55.518</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <Modified>2014-02-13T15:17:56.905</Modified>
     </AppxPackagedFile>

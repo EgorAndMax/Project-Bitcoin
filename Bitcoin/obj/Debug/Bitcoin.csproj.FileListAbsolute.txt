@@ -82,3 +82,45 @@ D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\obj\Debug\qualifiers.txt
 D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\obj\Debug\qualifiers.txt.intermediate
 D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Dropbox\Bitcoin Project\Bitcoin\Bitcoin\obj\Debug\ProjectArchitectures.txt
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\bitcoin2.jpg
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\App.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.pdb
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\resources.pri
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.build.appxrecipe
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\App.g.i.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\App.g.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\MainPage.g.i.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\MainPage.g.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\SectionPage.g.i.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\SectionPage.g.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\ItemPage.g.i.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\ItemPage.g.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\XamlTypeInfo.g.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\App.xaml
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\MainPage.xaml
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\SectionPage.xaml
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\ItemPage.xaml
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\App.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\MainPage.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\SectionPage.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\ItemPage.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\XamlSaveStateFile.xml
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Bitcoin.exe
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Bitcoin.pdb
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\priconfig.xml
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\priconfig.xml.intermediate
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\layout.resfiles
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\layout.resfiles.intermediate
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\resources.resfiles
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\resources.resfiles.intermediate
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\pri.resfiles
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\pri.resfiles.intermediate
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\qualifiers.txt
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\qualifiers.txt.intermediate
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\ProjectArchitectures.txt
