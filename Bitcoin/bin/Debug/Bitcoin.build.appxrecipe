@@ -1,69 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DNS-PC</Machine>
-    <WindowsUser>Максим</WindowsUser>
+    <Machine>HOME</Machine>
+    <WindowsUser>Егор</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>ea797717-bd2e-47fc-b12d-e3be28eea887</PackageIdentityName>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
       <PackagePath>Bitcoin.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\images.jpg">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\images.jpg">
       <PackagePath>images.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bitcoin2.jpg">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bitcoin2.jpg">
       <PackagePath>bitcoin2.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\DataModel\SampleData.json">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\DataModel\SampleData.json">
       <PackagePath>DataModel\SampleData.json</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\LightGray.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\LightGray.png">
       <PackagePath>Assets\LightGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\MediumGray.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\MediumGray.png">
       <PackagePath>Assets\MediumGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\Assets\DarkGray.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\DarkGray.png">
       <PackagePath>Assets\DarkGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
       <PackagePath>SectionPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf">
       <PackagePath>ItemPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

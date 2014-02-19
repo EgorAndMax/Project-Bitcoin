@@ -104,6 +104,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Folder Include="Strings\en-US\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -132,9 +133,6 @@
     <Content Include="images.jpg" />
     <None Include="Common\ReadMe.txt" />
     <None Include="Bitcoin_TemporaryKey.pfx" />
-    <PRIResource Include="Strings\en-US\Resources.resw">
-      <SubType>Designer</SubType>
-    </PRIResource>
     <Content Include="bitcoin2.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

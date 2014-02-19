@@ -1,1 +1,1 @@
-D:\GIT\Project-Bitcoin\Bitcoin\Bitcoin.csproj;neutral
+C:\Project-Bitcoin\Bitcoin\Bitcoin.csproj;neutral
