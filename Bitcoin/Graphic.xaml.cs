@@ -24,16 +24,18 @@ namespace Bitcoin
     /// </summary>
     public sealed partial class Graphic : Page
     {
-        //HubPage rootPage = HubPage.
+        HubPage rootPage = HubPage.Current;
         public Graphic()
         {
             this.InitializeComponent();
+            //ContentRoot.Children.Add(HiddenFrame);
             webView1.NavigationStarting += webView1_NavigationStarting;
             webView1.ContentLoading += webView1_ContentLoading;
             webView1.DOMContentLoaded += webView1_DOMContentLoaded;
             webView1.UnviewableContentIdentified += webView1_UnviewableContentIdentified;
             webView1.NavigationCompleted += webView1_NavigationCompleted;
         }
+        
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             NavigateWebview("https://blockchain.info/ru/charts/market-price?timespan=30days&showDataPoints=false&daysAverageString=1&show_header=false&scale=0&address=");

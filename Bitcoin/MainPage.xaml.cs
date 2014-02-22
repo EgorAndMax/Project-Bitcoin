@@ -76,6 +76,7 @@ namespace Bitcoin
             Page hiddenPage = HiddenFrame.Content as Page;
 
             UIElement output = hiddenPage.FindName("Output") as UIElement;
+            var OutputSection = hiddenPage.FindName("OutputSection") as UserControl;
 
             if (output == null)
                 return;

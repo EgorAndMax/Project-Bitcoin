@@ -170,3 +170,4 @@ D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Graphic.g.i.cs
 D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Graphic.g.cs
 D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Graphic.xaml
 D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Graphic.xbf
+D:\GIT\Project-Bitcoin\Bitcoin\bin\Debug\Graphic.xbf
