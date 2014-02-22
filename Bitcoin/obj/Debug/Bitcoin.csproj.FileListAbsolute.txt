@@ -166,3 +166,7 @@ C:\Project-Bitcoin\Bitcoin\obj\Debug\qualifiers.txt
 C:\Project-Bitcoin\Bitcoin\obj\Debug\qualifiers.txt.intermediate
 C:\Project-Bitcoin\Bitcoin\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Project-Bitcoin\Bitcoin\obj\Debug\ProjectArchitectures.txt
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Graphic.g.i.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Graphic.g.cs
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Graphic.xaml
+D:\GIT\Project-Bitcoin\Bitcoin\obj\Debug\Graphic.xbf

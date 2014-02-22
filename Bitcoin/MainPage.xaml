@@ -149,11 +149,17 @@
                     </GridView>
                 </DataTemplate>
             </HubSection>
-                 <HubSection Header="Текущий курс Bicoin, графики и прочее" Width="1380">
-                 	<DataTemplate>
-                 		<Grid/>
-                 	</DataTemplate>
-                 </HubSection>
+            
+            <HubSection  Header="Текущий курс Bicoin" Width="1380">
+                <DataTemplate>
+                    <Grid x:Name="ContentROOT">
+                        <ScrollViewer x:Name="MainScrollViewer" Grid.Row="1" ZoomMode="Disabled" IsTabStop="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Padding="0,0,0,20">
+                            <UserControl x:Name="OutputSectioN" Grid.Row="10" Grid.ColumnSpan="3" BorderThickness="1"/>
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            
             <HubSection Header="Ещё что нибудь" Width="1380">
                  	<DataTemplate>
                  		<Grid/>
