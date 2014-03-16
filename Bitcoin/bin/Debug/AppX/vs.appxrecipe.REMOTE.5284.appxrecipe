@@ -14,80 +14,80 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-15T11:28:10.334</Modified>
+      <Modified>2014-02-19T16:17:31.378</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
       <PackagePath>Bitcoin.exe</PackagePath>
-      <Modified>2014-03-16T17:24:44.704</Modified>
+      <Modified>2014-02-19T16:17:29.836</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\images.jpg">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\images.jpg">
       <PackagePath>images.jpg</PackagePath>
-      <Modified>2014-03-15T11:25:40.007</Modified>
+      <Modified>2014-02-19T16:11:42.895</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bitcoin2.jpg">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bitcoin2.jpg">
       <PackagePath>bitcoin2.jpg</PackagePath>
-      <Modified>2014-03-15T11:25:40.005</Modified>
+      <Modified>2014-02-19T16:11:42.891</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\DataModel\SampleData.json">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\DataModel\SampleData.json">
       <PackagePath>DataModel\SampleData.json</PackagePath>
-      <Modified>2014-03-15T11:25:39.761</Modified>
+      <Modified>2014-02-19T16:11:42.119</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-15T11:25:39.732</Modified>
+      <Modified>2014-02-19T16:11:42.070</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-15T11:25:39.735</Modified>
+      <Modified>2014-02-19T16:11:42.074</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-15T11:25:39.736</Modified>
+      <Modified>2014-02-19T16:11:42.076</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-15T11:25:39.737</Modified>
+      <Modified>2014-02-19T16:11:42.078</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\LightGray.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\LightGray.png">
       <PackagePath>Assets\LightGray.png</PackagePath>
-      <Modified>2014-03-15T11:25:39.731</Modified>
+      <Modified>2014-02-19T16:11:42.068</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\MediumGray.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\MediumGray.png">
       <PackagePath>Assets\MediumGray.png</PackagePath>
-      <Modified>2014-03-15T11:25:39.734</Modified>
+      <Modified>2014-02-19T16:11:42.072</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\DarkGray.png">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\Assets\DarkGray.png">
       <PackagePath>Assets\DarkGray.png</PackagePath>
-      <Modified>2014-03-15T11:25:39.730</Modified>
+      <Modified>2014-02-19T16:11:42.065</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-03-15T11:27:54.309</Modified>
+      <Modified>2014-02-19T16:16:03.284</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-03-16T17:24:43.236</Modified>
+      <Modified>2014-02-19T16:16:03.284</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
       <PackagePath>SectionPage.xbf</PackagePath>
-      <Modified>2014-03-15T11:27:54.381</Modified>
+      <Modified>2014-02-19T16:16:03.285</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf">
       <PackagePath>ItemPage.xbf</PackagePath>
-      <Modified>2014-03-15T11:27:54.354</Modified>
+      <Modified>2014-02-19T16:16:03.285</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Project-Bitcoin\Bitcoin\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-03-15T11:28:09.599</Modified>
+      <Modified>2014-02-19T16:17:30.091</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -23,6 +23,7 @@ namespace Bitcoin
     /// A page that displays a grouped collection of items.
     /// </summary>
     public sealed partial class HubPage : Page
+
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -43,13 +44,16 @@ namespace Bitcoin
         {
             get { return this.defaultViewModel; }
         }
-
         public HubPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
+           
+    
         }
+
+       
 
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also
@@ -67,6 +71,7 @@ namespace Bitcoin
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
             var sampleDataGroup = await SampleDataSource.GetGroupAsync("Group-4");
             this.DefaultViewModel["Section3Items"] = sampleDataGroup;
+            
         }
 
         /// <summary>
@@ -116,5 +121,6 @@ namespace Bitcoin
         }
 
         #endregion
+
     }
 }
