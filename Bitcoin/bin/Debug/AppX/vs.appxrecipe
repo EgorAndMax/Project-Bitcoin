@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
       <PackagePath>Bitcoin.exe</PackagePath>
-      <Modified>2014-03-16T17:24:44.704</Modified>
+      <Modified>2014-04-04T14:21:41.988</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\images.jpg">
       <PackagePath>images.jpg</PackagePath>
@@ -75,7 +75,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-03-16T17:24:43.236</Modified>
+      <Modified>2014-04-04T14:21:40.312</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
       <PackagePath>SectionPage.xbf</PackagePath>

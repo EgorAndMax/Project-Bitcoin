@@ -121,16 +121,13 @@
                     </GridView>
                 </DataTemplate>
             </HubSection>
-                 <HubSection Width="1380">
-                 	<DataTemplate>
-                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/market-price?show_header=false"/>
-                 	</DataTemplate>
-                 </HubSection>
             <HubSection Width="1380">
                 <DataTemplate>
-                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/miners-revenue?show_header=false"/>
+                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/market-price?show_header=false"/>
                 </DataTemplate>
             </HubSection>
+
+          
             <HubSection Width="1380">
                 <DataTemplate>
                     <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/total-bitcoins?show_header=false"/>
@@ -138,7 +135,7 @@
             </HubSection>
             <HubSection Width="1380">
                 <DataTemplate>
-                    
+                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://cointory.com/all"/>
                 </DataTemplate>
             </HubSection>
         </Hub>

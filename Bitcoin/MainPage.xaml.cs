@@ -49,11 +49,11 @@ namespace Bitcoin
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
-           
+            
     
         }
 
-       
+           
 
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also
@@ -121,6 +121,7 @@ namespace Bitcoin
         }
 
         #endregion
+        
 
     }
 }

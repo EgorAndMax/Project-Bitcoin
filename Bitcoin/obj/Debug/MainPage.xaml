@@ -39,7 +39,7 @@
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
-        <Hub x:ConnectionId='0'                                                     >
+        <Hub x:ConnectionId='1'                                                     >
             <Hub.Header>
                 <!-- Back button and page title -->
                 <Grid>
@@ -107,7 +107,7 @@
                  <HubSection IsHeaderInteractive="True" DataContext="{Binding Section3Items}" d:DataContext="{Binding Groups[3], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}"
                          Header="Интересная информация о Bitcoin и криптовалюте" Padding="40,40,40,32" Width="1230">
                 <DataTemplate>
-                    <GridView x:ConnectionId='0'
+                    <GridView x:ConnectionId='2'
                         x:Name="itemGridView"
                         ItemsSource="{Binding Items}"
                         Margin="-9,-14,0,0"
@@ -121,16 +121,13 @@
                     </GridView>
                 </DataTemplate>
             </HubSection>
-                 <HubSection Width="1380">
-                 	<DataTemplate>
-                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/market-price?show_header=false"/>
-                 	</DataTemplate>
-                 </HubSection>
             <HubSection Width="1380">
                 <DataTemplate>
-                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/miners-revenue?show_header=false"/>
+                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/market-price?show_header=false"/>
                 </DataTemplate>
             </HubSection>
+
+          
             <HubSection Width="1380">
                 <DataTemplate>
                     <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/total-bitcoins?show_header=false"/>
@@ -138,7 +135,7 @@
             </HubSection>
             <HubSection Width="1380">
                 <DataTemplate>
-                    
+                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://cointory.com/all"/>
                 </DataTemplate>
             </HubSection>
         </Hub>
