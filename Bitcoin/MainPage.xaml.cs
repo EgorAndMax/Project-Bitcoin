@@ -23,11 +23,8 @@ namespace Bitcoin
     /// A page that displays a grouped collection of items.
     /// </summary>
     public sealed partial class HubPage : Page
-    {
-        public event EventHandler WbLoaded;
-        public static HubPage Current;
-        public Frame HiddenFrame = null;
 
+    {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
@@ -47,52 +44,17 @@ namespace Bitcoin
         {
             get { return this.defaultViewModel; }
         }
-
         public HubPage()
         {
             this.InitializeComponent();
-            Current = this;
-            HiddenFrame = new Frame();
-            HiddenFrame.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            ContentRoot.Children.Add(HiddenFrame);
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
+            
+    
         }
 
-        //protected override void OnNavigatedTo(NavigationEventArgs e)
-        //{
-        //    PopulateScenarios();
-        //    InvalidateLayout();
-        //}
+           
 
-        public void LoadWebView(Type WebViewClass)
-        {
-
-            // Load the ScenarioX.xaml file into the Frame.
-            HiddenFrame.Navigate(WebViewClass, this);
-
-            // Get the top element, the Page, so we can look up the elements
-            // that represent the input and output sections of the ScenarioX file.
-            Page hiddenPage = HiddenFrame.Content as Page;
-
-            UIElement output = hiddenPage.FindName("Output") as UIElement;
-            var OutputSection = hiddenPage.FindName("OutputSection") as UserControl;
-
-            if (output == null)
-                return;
-
-            // Find the LayoutRoot which parents the input and output sections in the main page.
-            Panel panel = hiddenPage.FindName("LayoutRoot") as Panel;
-
-            if (panel != null)
-            {
-                // Get rid of the content that is currently in the intput and output sections.
-                panel.Children.Remove(output);
-
-                // Populate the input and output sections with the newly loaded content.
-                OutputSection.Content = output;
-            }
-        }
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also
         /// provided when recreating a page from a prior session.
@@ -109,6 +71,7 @@ namespace Bitcoin
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
             var sampleDataGroup = await SampleDataSource.GetGroupAsync("Group-4");
             this.DefaultViewModel["Section3Items"] = sampleDataGroup;
+            
         }
 
         /// <summary>
@@ -158,5 +121,7 @@ namespace Bitcoin
         }
 
         #endregion
+        
+
     }
 }
