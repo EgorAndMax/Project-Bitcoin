@@ -1,0 +1,378 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="Bitcoin.TechnicalFeatures"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Bitcoin"
+    xmlns:common="using:Bitcoin.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <x:String x:Key="ChevronGlyph">&#xE26B;</x:String>
+
+        <!-- TODO: Удалите эту строку, если ключ AppName объявлен в App.xaml -->
+        <x:String x:Key="AppName">Мое приложение</x:String>
+
+    </Page.Resources>
+
+    <!--
+        Эта сетка выступает в роли корневой области страницы.
+    -->
+    <Grid>
+    	<Grid.Background>
+    		<ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/bgOfTechFeach.jpg"/>
+    	</Grid.Background>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Hub>
+            <Hub.Header>
+                <!-- Кнопка "Назад" и заголовок страницы -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button  x:Name="backButton" Margin="-1,-1,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+                    <TextBlock x:Name="pageTitle" Text="Технические особенности" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" FontFamily="Georgia"/>
+                </Grid>
+            </Hub.Header>
+        	<HubSection Width="910" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="835">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="1098" VerticalAlignment="Top" Width="840" Grid.RowSpan="4" Margin="-15,0,0,-498" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="18,8,20,470" TextWrapping="Wrap" 
+        					Text="Терминология" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold"/>
+        				<ScrollViewer Margin="10,60,20,28" Grid.RowSpan="4" ZoomMode="Disabled">
+        					<Grid>
+        						<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="10,0,20,20" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia">
+        							<Run Text="С Bitcoin сталкиваются как IT-специалисты, так и менее квалифицирован-ные пользователи. В связи с этим, с одной стороны, сформировалась система бытовых терминов, используемая обычными пользователями, а с другой сто-роны, сформировалась система терминов для специалистов, которая в основном исходит от разработчиков Bitcoin-qt и Bitcoind. Расхождения касаются наиболее часто используемых терминов. Перечислим их:"/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="BTC — сокращенное название единиц учёта. Используется вместо слова «Bitcoin» для однозначного указания, что имеется в виду сама цифровая валюта, а не сеть, набор алгоритмов или какая-либо другая сущность, относящаяся к данной тематике."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="bitcoind — программа (демон), в которой реализован протокол Bitcoin, используемая посредством командной строки или удаленного вызова процедур (JSON-RPC)."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Bitcoin-qt — первая программа с графическим интерфейсом Qt, совместимая с bitcoind. Bitcoin можно также использовать и через другие программы."/>
+        							<LineBreak/>
+        							<Run Text="Пара ключей — публичный и приватный ключ. Используется для генерации адреса и подписывания транзакции на перевод BTC."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Адрес — является идентификатором, содержащим около 33 алфавитно-цифровых символов. Используется как для получения, так и для отправки BTC. Представляет собой 160-битный хэш от открытого ключа ECDSA ключевой пары."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Кошелёк — образное название для личного хранилища BTC (account) или всё аккаунты внутри wallet.dat. Account — понятие в протоколе Bitcoin для упрощения создания онлайн-сервиса с помощью bitcoind. Содержит некоторое количество ключевых пар и служебную информацию. Данные об аккаунтах и адресах хранятся в файле «wallet.dat». В Bitcoin-qt аккаунты отображаются как метки. Не следует путать кошелёк как весь wallet.dat, аккаунт и адрес."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Транзакция — запись о переводе BTC с одной группы адресов (0 и более) на другую группу адресов (1 и более). Содержит подписанный отправителем хеш транзакции с помощью которой отправитель ранее получил BTC и адреса получателей BTC."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Блок — запись в цепочке блоков(базе данных), которая содержит в себе множество ожидающих подтверждения транзакций и подтверждает их."/>
+        						</TextBlock>
+        					</Grid>
+        				</ScrollViewer>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        	<HubSection Width="707" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="609">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="155" />
+        					<RowDefinition Height="681"/>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="624" Grid.RowSpan="2" Margin="-15,0,0,0" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="34,10,4,90" TextWrapping="Wrap" 
+        					Text="Хранение данных" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold"/>
+        				<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="34,63,37,73" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia" Grid.RowSpan="2">
+        					<Run Text="БД публично хранит в незашифрованном виде информацию о всех транзакциях, подписываемых с помощью асимметричного шифрования. Для предотвращения многократной траты одной и той же суммы используются метки времени, реализованные путём разбиения БД на цепочку специальных блоков, каждый из которых, в числе прочего, содержит в себе хеш предыдущего блока и свой порядковый номер. Каждый новый блок осуществляет подтверждение транзакций, информацию о которых содержит и дополнительное подтверждение транзакций во всех предыдущих блоках цепочки. Для уменьшения размера БД используется древовидное хеширование."/>
+        					<LineBreak/>
+        					<Run/>
+        					<LineBreak/>
+        					<Run Text="Для более наглядного объяснения механизма работы платёжной системы Сатоси Накамото ввёл понятие «цифровая монета», определив его как цепочку цифровых подписей. Исходя из данного определения, каждая монета имеет свой собственный номинал. Каждому bitcoin-адресу может сопоставляться любое количество монет. При помощи транзакций монеты можно делить и объединять, при этом их суммарный номинал за вычетом комиссии сохраняется."/>
+        				</TextBlock>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        	<HubSection Width="910" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="835">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="1098" VerticalAlignment="Top" Width="840" Grid.RowSpan="4" Margin="-15,0,0,-498" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="24,11,14,467" TextWrapping="Wrap" 
+        					Text="Транзакции" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold"/>
+        				<ScrollViewer Margin="10,60,20,28" Grid.RowSpan="4" ZoomMode="Disabled">
+        					<Grid>
+        						<Image HorizontalAlignment="Left" Height="327" Margin="70,10,0,0" VerticalAlignment="Top" Width="680" Source="ms-appx:///Assets/tranzakzii.png"/>
+        						<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="14,347,16,10" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia">
+        							<Run Text="Когда один пользователь передаёт некую сумму другому пользователю, он создаёт новую транзакцию, которая содержит хеш предыдущей транзакции, подписанный им, и публичный ключ следующего владельца. Затем эта информация широковещательным запросом отправляется в сеть. Остальные узлы сети проверяют подписи, прежде чем принять транзакцию к обработке."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Транзакции поддерживают множественные входы (результаты предыдущих транзакций) и выходы (указания о получателях). В общем случае транзакция может содержать произвольное количество выходов (возможны случаи, когда необходимо передать средства нескольким получателям с помощью одной транзакции, что позволит сэкономить на комиссионных сборах). Транзакция также может содержать множество входов, которые могут являться даже совпадающими bitcoin-адресами. Такое может иметь место, когда было несколько входящих транзакций на один адрес. Каждая первая и только первая транзакция в блоке не имеет входов и зачисляет вознаграждение за создание данного блока. Такая транзакция должна получить 120 подтверждений, чтобы полученные с помощью неё bitcoin могли быть использованы. Значения со всех входов суммируются, и сумма распределяется по выходам. Разница между суммой на входе и суммой на выходе считается комиссией за осуществление транзакции. Размер вознаграждения, зачисляемого первой транзакцией, является суммой всех комиссий у транзакций, включённых в блок, и фиксированного значения, изначально равного 50 и уменьшающегося вдвое каждые 210000 блоков."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Транзакции обязательно содержат указания о получателях, например, bitcoin-адреса или иные условия."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Большинство транзакций, имеющих входы, имеют минимум два выхода: с указателем получателя монеты с номиналом, равным отправленной сумме, и указателя на отправителя для «сдачи» — монеты с номиналом, который остался от суммарного номинала на входе за вычетом комиссии. «Bitcoin-qt» отправляет каждую сдачу на новый bitcoin-адрес из резерва заранее созданных и скрытых от пользователя адресов. Информация о том, какая именно монета является сдачей, отсутствует в БД."/>
+        						</TextBlock>
+        					</Grid>
+        				</ScrollViewer>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        	<HubSection Width="910" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="877">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="1098" VerticalAlignment="Top" Width="892" Grid.RowSpan="4" Margin="-15,0,0,-450" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="28,10,10,596" TextWrapping="Wrap" 
+        					Text="Ключи и адресация" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold"/>
+        				<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="24,55,72,113" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia">
+        					<Run Text="Каждый пользователь системы может генерировать неограниченное количество пар ключей, которые хранятся в специальном файле (кошельке). Для создания новых пар ключей используется алгоритм ECDSA с параметрами secp256k1. Размер закрытого ключа — 256 бит, а соответствующего ему открытого ключа — 512 бит. Создание новой пары ключей автономно и не требует соединения с сетью."/>
+        					<LineBreak/>
+        					<Run/>
+        					<LineBreak/>
+        					<Run Text="Передача bitcoin происходит с выставлением условий для получателя. Воспользоваться суммой сможет тот, кто сможет выполнить все условия. Стандартным условием является использование bitcoin-адреса. Но условия могут быть и другими, например, последовательное использование нескольких bitcoin-адресов и/или привязка к определённому IP-адресу. Bitcoin-адрес генерируется на основе преобразования публичного ключа пользователя. Секретные (приватные) ключи авторизуют владельца. Bitcoin-адреса не содержат персональной информации о владельце. Человек может иметь множество адресов, создавая их по собственной инициативе, для чего даже не требуется подключение к интернету. Создание адреса лишь для одной транзакции или одного корреспондента помогает сохранить анонимность."/>
+        					<LineBreak/>
+        					<Run/>
+        					<LineBreak/>
+        					<Run Text="Bitcoin-адрес в текстовой форме представляет собой строку Base 58 длиной до 34 символов, состоящую из букв латинского алфавита и цифр, например 175tWpb8K1S7NmH4Zx6rewF9WQrcZv245W. Существуют варианты представления адресов в виде QR-кодов и других двухмерных штрихкодов, пригодных для считывания мобильными устройствами."/>
+        				</TextBlock>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        	<HubSection Width="910" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="835">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="1098" VerticalAlignment="Top" Width="840" Grid.RowSpan="4" Margin="-15,0,0,-498" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="24,11,14,467" TextWrapping="Wrap" 
+        					Text="Цепочка блоков" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold"/>
+        				<ScrollViewer Margin="10,60,20,28" Grid.RowSpan="4" ZoomMode="Disabled">
+        					<Grid>
+        						<Image HorizontalAlignment="Left" Height="327" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" Source="ms-appx:///Assets/Blockchain.png"/>
+        						<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="249,10,21,20" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia">
+        							<Run Text="Любые транзакции не считаются легитимными (не считаются «подтверждёнными»), пока информация о них не будет сгруппирована в специальные структуры — блоки. Структура и информация в блоках подчиняется заданным правилам и её можно быстро проверить. Каждый блок всегда содержит информацию об одном предыдущем блоке. Это позволяет все существующие блоки выстроить в одну цепочку, которая представляет собой распределённую базу данных и содержит информацию о всех совершённых когда-либо операциях с bitcoin."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Блоки одновременно создают множество майнеров. Регулярно возникают ситуации, когда один и тот же блок является предыдущим для двух новых блоков. В каждом из новых блоков могут встречаться как одинаковые транзакции, так и разные, то есть вошедшие только в один из них. Через некоторое время появляются очередные блоки, цепочка может раздвоиться. Каждая из ветвей равноправна до тех пор, пока одна из них не получит более длинное продолжение. Обычно, при равенстве длины, предпочтение отдаётся той цепочке, конечный блок которой появился раньше. Система автоматически легитимной считает более длинную цепочку, не обращая внимание на время создания последнего блока. Транзакции, вошедшие исключительно в менее длинную ветку (в том числе по выплате вознаграждения), теряют статус подтверждённых. Если это транзакция по передаче bitcoin, то она может быть включена в очередной блок. Транзакции получения вознаграждения за создание отсечённых блоков не дублируются в другой ветке, то есть «лишние» bitcoin за отсечённые блоки не получают дальнейших подтверждений и «утрачиваются»."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Таким образом, цепочка блоков содержит историю владения, с которой можно ознакомиться, например, на специализированных сайтах."/>
+        						</TextBlock>
+        						<TextBlock HorizontalAlignment="Left" Height="158" Margin="10,342,0,0" TextWrapping="Wrap" Text="Основная последовательность блоков (чёрные) является самой длинной от начального (зелёный) до текущего. Побочные ветви (фиолетовые) отсекаются." VerticalAlignment="Top" Width="194" FontFamily="Georgia" FontSize="16"/>
+        					</Grid>
+        				</ScrollViewer>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        	<HubSection Width="910" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="835">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="1098" VerticalAlignment="Top" Width="840" Grid.RowSpan="4" Margin="-15,0,0,-498" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="18,8,20,470" TextWrapping="Wrap" 
+        					Text="Атака «Double Spending»" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold"/>
+        				<ScrollViewer Margin="10,60,20,28" Grid.RowSpan="4" ZoomMode="Disabled">
+        					<Grid>
+        						<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="10,0,20,20" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia">
+        							<Run Text="Если пользователь попытается использовать ранее потраченные bitcoin-монеты снова, сеть не примет его транзакцию как действительную. Но в параллельных ветках блоков могут находиться транзакции, которые по разному расходуют одни и те же начальные средства. Вероятность существования параллельных цепочек блоков крайне мала и экспоненциально уменьшается с ростом длины цепочки и количества независимых майнеров. Таким образом, чем больше подтверждений имеет транзакция, тем менее вероятна отмена транзакции из-за отмирания содержащей её цепочки блоков. Однако при наличии у злоумышленника контроля над достаточно большой долей суммарной мощности майнинга существует ненулевая вероятность «тайного» выстраивания длинных параллельных цепочек блоков. После их публикации в сети главной будет признана более длинная цепочка. Отмена цепочки блоков может приводить к признанию недействительными транзакций даже подтвержденных несколькими блоками и последующей повторной трате средств."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="При наличии в одних руках свыше 50 % суммарной мощности майнинга такая ситуация возможна на любом уровне подтверждения (атака «Double Spending» или «атака 51 %»). Если подконтрольная мощность меньше 50 %, то вероятность успеха экспоненциально снижается с каждым подтверждением."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Проведение успешной атаки не позволяет:"/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text=" -  изменить размер вознаграждения за генерацию блока"/>
+        							<LineBreak/>
+        							<Run Text=" -  получить неограниченное количество bitcoin"/>
+        							<LineBreak/>
+        							<Run Text=" -  уничтожить сеть"/>
+        							<LineBreak/>
+        							<Run Text=" -  потратить bitcoin, которые ранее не принадлежали злоумышленнику."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="На начало 2013 года мощность сети составляла менее 25 THash/s, но за последующие 3 месяца выросла до 55 за счет массового распространения специализированных процессоров (ASIC), разработанных специально для майнинга в сети Bitcoin. В середине июля 2013 года мощность сети превысила 210,46 THash/s. К сентябрю мощность превысила 1000 THash/s, в октябре мощность удвоилась, а на 1 декабря 2013 года превысила 6000 THash/s. При этом пользователь с наибольшей производительностью имеет менее 100 THash/s."/>
+        						</TextBlock>
+        					</Grid>
+        				</ScrollViewer>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        	<HubSection Width="910" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="835">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="1098" VerticalAlignment="Top" Width="840" Grid.RowSpan="4" Margin="-15,0,0,-498" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="18,8,20,470" TextWrapping="Wrap" 
+        					Text="Структура блока" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold"/>
+        				<ScrollViewer Margin="10,60,20,28" Grid.RowSpan="4" ZoomMode="Disabled">
+        					<Grid>
+        						<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="10,0,20,20" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia">
+        							<Run Text="Блок состоит из заголовка и списка транзакций. Заголовок блока включает в себя свой хеш, хеш предыдущего блока, хеши транзакций и дополнительную служебную информацию. Первой транзакцией в блоке всегда записывается генерация новых bitcoin-монет, которые в случае успешной генерации блока станут наградой пользователю за созданный блок. Далее идут все или некоторые из последних транзакций, которые ещё не были записаны в предыдущие блоки."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Созданный блок будет принят остальными пользователями, если числовое значение хеша заголовка равно или ниже определённой цели, величина которой периодически корректируется. Если блок не удовлетворяет цели, то изменяется блок служебной информации в заголовке и хеш пересчитывается. Обычно требуется большое количество попыток, так как результат хеширования (функции SHA-256) практически непредсказуем. Когда вариант найден, узел рассылает полученный блок другим подключенным узлам. Другие узлы проверяют блок. Если ошибок нет, то блок считается добавленным в цепочку и следующий блок должен включить в себя его хеш."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Величина целевого числа, с которым сравнивается хеш, корректируется через каждые 2016 блоков. Запланировано, что вся сеть будет тратить на генерацию одного блока примерно 10 минут, на 2016 блоков — около двух недель. Если 2016 блоков сформированы быстрее, то цель немного уменьшается и достичь её становится труднее, в противном случае цель увеличивается. Изменение сложности вычислений не влияет на надёжность сети Bitcoin и требуется лишь для того, чтобы система генерировала блоки почти с постоянной скоростью, не зависящей от мощности сети."/>
+        						</TextBlock>
+        					</Grid>
+        				</ScrollViewer>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        	<HubSection Width="910" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="835">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="1098" VerticalAlignment="Top" Width="840" Grid.RowSpan="4" Margin="-15,0,0,-498" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="18,8,20,470" TextWrapping="Wrap" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold" Text="Эмиссия, Сложность, Пулы"/>
+        				<ScrollViewer Margin="10,60,20,28" Grid.RowSpan="4" ZoomMode="Disabled">
+        					<Grid>
+        						<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="10,0,20,20" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia">
+        							<Run Text="Bitcoin предусматривает только одну возможность для дополнительной эмиссии — новые bitcoin-монеты начисляются в качестве вознаграждения тому, кто сгенерировал очередной блок, получивший 120 подтверждений."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Первоначально эмиссия составляла 50 bitcoin в каждом блоке. После 2012-11-28 15:24:38 UTC значение уменьшилось до 25 bitcoin, в соответствии с алгоритмом. На апрель 2013 года в обращении находилось почти 11 миллионов bitcoin, что составляет более половины их максимально возможного предельного количества в 21 миллион."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Желающие получить возможно большее вознаграждение стремились задействовать как можно большие вычислительные мощности. Особенность задачи позволяла применить максимальное распараллеливание вычислений. В силу специфики строения, для этого хорошо подошли графические процессоры (GPU) с небольшой дополнительной программой (в сотни раз производительнее CPU) и платы с FPGA (производительность сравнима с видеокартами, но превосходят их по энергоэффективности). Затем были выпущены специализированные процессоры (ASIC), выполняющие только вычисление хешей для Bitcoin, более производительные чем GPU и FPGA."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="За требование к хешам блоков отвечает специальный параметр, называемый «сложность». Так как вычислительные мощности сети непостоянны, этот параметр пересчитывается клиентами сети через каждые 2016 блоков таким образом, чтобы поддерживать среднюю скорость формирования распределённой БД на уровне 2016 блоков в две недели. Таким образом 1 блок должен создаваться примерно раз в десять минут. После создания 210 000 блоков (на что требуется примерно 4 года) вдвое уменьшается размер эмиссионного вознаграждения майнеров (снижается скорость эмиссии). На практике, когда вычислительная мощность сети растёт — соответствующие временные промежутки короче, а когда снижается — длиннее. Перерасчёт сложности с привязкой ко времени возможен благодаря наличию в заголовках блоков времени их создания. Оно записано в Unix-формате и взято по системным часам автора блока (если блок создан в пуле, то из системных часов сервера этого пула)."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Для уменьшения влияния фактора удачи и более равномерного и предсказуемого получения bitcoin майнеры используют пулы. Часто выплаты майнеру рассчитываются исходя из отправленных им пулу шар (shares) (блоков с хешем, который подошёл бы при сложности равной единице). В среднем нужно 232 операций хеширования для нахождения одной шары. Для нахождения блока в среднем требуется количество шар, равное текущей сложности."/>
+        						</TextBlock>
+        					</Grid>
+        				</ScrollViewer>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        	<HubSection Width="910" Header="" Height="802">
+        		<DataTemplate>
+        			<Grid Height="600" Width="835">
+        				<Grid.RowDefinitions>
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="Auto" />
+        					<RowDefinition Height="*" />
+        				</Grid.RowDefinitions>
+        				<Image HorizontalAlignment="Left" Height="1098" VerticalAlignment="Top" Width="840" Grid.RowSpan="4" Margin="-15,0,0,-498" Source="ms-appx:///Assets/bgdark.png" Stretch="Fill"/>
+        				<TextBlock Style="{StaticResource SubheaderTextBlockStyle}" Margin="18,8,20,470" TextWrapping="Wrap" FontSize="29.333" FontFamily="Georgia" FontWeight="Bold" Text="Подтверждение транзакций, Комиссионные сборы, Объём данных"/>
+        				<ScrollViewer Margin="10,86,20,2" Grid.RowSpan="4" ZoomMode="Disabled">
+        					<Grid>
+        						<TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="10,0,20,20" TextAlignment="Justify" FontSize="21.333" FontFamily="Georgia">
+        							<Run Text="Обычно при получении bitcoin-монет новый владелец не может сразу же передать их. Для уменьшения вероятности двойного использования, любая транзакция должна получить некоторое количество подтверждений. Одним подтверждением считается один новый блок, начиная с того, в котором упакована транзакция. Необходимое число подтверждений зависит от программы-клиента либо от указаний принимающей стороны."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Полученные за создание блока bitcoin не используются, пока количество подтверждений не достигнет 120. Полученные от других пользователей bitcoin-монеты клиент «Bitcoin-qt» позволяет использовать после шести подтверждений. Различные онлайн-сервисы часто устанавливают свой порог подтверждений."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="В системе Bitcoin не предусмотрено обязательных комиссионных сборов. Пользователи могут добровольно включать в платёж произвольную сумму комиссионного сбора, подавая на вход транзакции больше средств, чем на выход, что повышает приоритет обработки такой транзакции. Различные программы-клиенты имеют свои правила относительно размера и объекта комиссионных сборов."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Комиссионный сбор достаётся узлу, сгенерировавшему блок с такой транзакцией. Генерирующий новый блок пользователь может по своему усмотрению добавлять в него транзакции из очереди. Например, он может отобрать только транзакции с комиссионным сбором."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="В программах-клиентах была добавлена система, организующая записи транзакции таким образом, что пользователь может локально удалять данные из своей базы, которые ему точно не понадобятся. После того, как все транзакции с какими-то средствами были упакованы в блоки и подтверждены, предыдущие транзакции с этими средствами можно отбросить для экономии места на диске. Для того, чтобы это можно было осуществить без изменения хеша блока, транзакции хешируются с помощью TTH, и в заголовок блока помещается только результат данного хеширования."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Сейчас все пользователи официального клиентского ПО после запуска программы в первый раз получают полную базу данных (блоки без индексации и оптимизации). По состоянию на март 2013 её размер составлял более 7 ГБ."/>
+        							<LineBreak/>
+        							<Run/>
+        							<LineBreak/>
+        							<Run Text="Заголовок блока имеет объём около 80 байт. Так как блоки генерируются примерно каждые 10 минут, то за год будет накапливаться около 4,2 Мб заголовков блоков."/>
+        						</TextBlock>
+        					</Grid>
+        				</ScrollViewer>
+        			</Grid>
+        		</DataTemplate>
+        	</HubSection>
+        </Hub>
+    </Grid>
+</Page>

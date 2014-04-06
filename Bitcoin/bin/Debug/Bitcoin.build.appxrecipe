@@ -1,69 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>HOME</Machine>
-    <WindowsUser>Егор</WindowsUser>
+    <Machine>WORKINGHARD</Machine>
+    <WindowsUser>Максим</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>ea797717-bd2e-47fc-b12d-e3be28eea887</PackageIdentityName>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\Bitcoin.exe">
       <PackagePath>Bitcoin.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\images.jpg">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\bg.jpg">
+      <PackagePath>Assets\bg.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\bgOfHistory.jpg">
+      <PackagePath>Assets\bgOfHistory.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\bgOfTechFeach.jpg">
+      <PackagePath>Assets\bgOfTechFeach.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\bitcoin-history.jpg">
+      <PackagePath>Assets\bitcoin-history.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\car.jpg">
+      <PackagePath>Assets\car.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\conference.jpg">
+      <PackagePath>Assets\conference.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\HistoryOfBitcoin.jpg">
+      <PackagePath>Assets\HistoryOfBitcoin.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\legalstatus.jpg">
+      <PackagePath>Assets\legalstatus.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\pizza.jpg">
+      <PackagePath>Assets\pizza.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\techfeach.jpg">
+      <PackagePath>Assets\techfeach.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\terminal.jpg">
+      <PackagePath>Assets\terminal.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\images.jpg">
       <PackagePath>images.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bitcoin2.jpg">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bitcoin2.jpg">
       <PackagePath>bitcoin2.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\DataModel\SampleData.json">
-      <PackagePath>DataModel\SampleData.json</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\bgdark.png">
+      <PackagePath>Assets\bgdark.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\bgdesc.png">
+      <PackagePath>Assets\bgdesc.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\Blockchain.png">
+      <PackagePath>Assets\Blockchain.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\graphic.png">
+      <PackagePath>Assets\graphic.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\tranzakzii.png">
+      <PackagePath>Assets\tranzakzii.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\LightGray.png">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\LightGray.png">
       <PackagePath>Assets\LightGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\MediumGray.png">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\MediumGray.png">
       <PackagePath>Assets\MediumGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Assets\DarkGray.png">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Assets\DarkGray.png">
       <PackagePath>Assets\DarkGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\DataModel\SampleData.json">
+      <PackagePath>DataModel\SampleData.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\Articles\History.xbf">
+      <PackagePath>Articles\History.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\Articles\LegalStatus.xbf">
+      <PackagePath>Articles\LegalStatus.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\Articles\TechnicalFeatures.xbf">
+      <PackagePath>Articles\TechnicalFeatures.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\Graphic.xbf">
+      <PackagePath>Graphic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\SectionPage.xbf">
       <PackagePath>SectionPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\ItemPage.xbf">
       <PackagePath>ItemPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

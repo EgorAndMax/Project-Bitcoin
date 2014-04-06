@@ -69,7 +69,7 @@ namespace Bitcoin
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var sampleDataGroup = await SampleDataSource.GetGroupAsync("Group-4");
+            var sampleDataGroup = await SampleDataSource.GetGroupAsync("Group-1");
             this.DefaultViewModel["Section3Items"] = sampleDataGroup;
             
         }
@@ -81,9 +81,6 @@ namespace Bitcoin
         /// <param name="e">Event data that describes how the click was initiated.</param>
         void Hub_SectionHeaderClick_Articles(object sender, HubSectionHeaderClickEventArgs e)
         {
-            HubSection section = e.Section;
-            var group = section.DataContext;
-            this.Frame.Navigate(typeof(SectionPage), ((SampleDataGroup)group).UniqueId);
         }
 
         /// <summary>
@@ -97,7 +94,19 @@ namespace Bitcoin
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
             var itemId = ((SampleDataItem)e.ClickedItem).UniqueId;
-            this.Frame.Navigate(typeof(ItemPage), itemId);
+            switch (itemId)
+            {
+                case "Group-1-Item-1":
+                    this.Frame.Navigate(typeof(History));
+                    break;
+                case "Group-1-Item-2":
+                    this.Frame.Navigate(typeof(TechnicalFeatures));
+                    break;
+                default:
+                    this.Frame.Navigate(typeof(ItemPage), itemId);
+                    break;
+
+            }
         }
         #region NavigationHelper registration
 

@@ -124,31 +124,35 @@ namespace Bitcoin.Bitcoin_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
-            _typeNameTable[0] = "Bitcoin.Graphic";
+            _typeNameTable = new string[13];
+            _typeNameTable[0] = "Bitcoin.History";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Bitcoin.HubPage";
-            _typeNameTable[4] = "Bitcoin.Common.NavigationHelper";
-            _typeNameTable[5] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[6] = "Bitcoin.Common.ObservableDictionary";
-            _typeNameTable[7] = "Object";
-            _typeNameTable[8] = "String";
-            _typeNameTable[9] = "Bitcoin.SectionPage";
-            _typeNameTable[10] = "Bitcoin.ItemPage";
+            _typeNameTable[3] = "Bitcoin.Common.ObservableDictionary";
+            _typeNameTable[4] = "Object";
+            _typeNameTable[5] = "String";
+            _typeNameTable[6] = "Bitcoin.Common.NavigationHelper";
+            _typeNameTable[7] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[8] = "Bitcoin.TechnicalFeatures";
+            _typeNameTable[9] = "Bitcoin.Graphic";
+            _typeNameTable[10] = "Bitcoin.HubPage";
+            _typeNameTable[11] = "Bitcoin.SectionPage";
+            _typeNameTable[12] = "Bitcoin.ItemPage";
 
-            _typeTable = new global::System.Type[11];
-            _typeTable[0] = typeof(global::Bitcoin.Graphic);
+            _typeTable = new global::System.Type[13];
+            _typeTable[0] = typeof(global::Bitcoin.History);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Bitcoin.HubPage);
-            _typeTable[4] = typeof(global::Bitcoin.Common.NavigationHelper);
-            _typeTable[5] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[6] = typeof(global::Bitcoin.Common.ObservableDictionary);
-            _typeTable[7] = typeof(global::System.Object);
-            _typeTable[8] = typeof(global::System.String);
-            _typeTable[9] = typeof(global::Bitcoin.SectionPage);
-            _typeTable[10] = typeof(global::Bitcoin.ItemPage);
+            _typeTable[3] = typeof(global::Bitcoin.Common.ObservableDictionary);
+            _typeTable[4] = typeof(global::System.Object);
+            _typeTable[5] = typeof(global::System.String);
+            _typeTable[6] = typeof(global::Bitcoin.Common.NavigationHelper);
+            _typeTable[7] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[8] = typeof(global::Bitcoin.TechnicalFeatures);
+            _typeTable[9] = typeof(global::Bitcoin.Graphic);
+            _typeTable[10] = typeof(global::Bitcoin.HubPage);
+            _typeTable[11] = typeof(global::Bitcoin.SectionPage);
+            _typeTable[12] = typeof(global::Bitcoin.ItemPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -183,12 +187,14 @@ namespace Bitcoin.Bitcoin_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_Graphic() { return new global::Bitcoin.Graphic(); }
-        private object Activate_3_HubPage() { return new global::Bitcoin.HubPage(); }
-        private object Activate_6_ObservableDictionary() { return new global::Bitcoin.Common.ObservableDictionary(); }
-        private object Activate_9_SectionPage() { return new global::Bitcoin.SectionPage(); }
-        private object Activate_10_ItemPage() { return new global::Bitcoin.ItemPage(); }
-        private void MapAdd_6_ObservableDictionary(object instance, object key, object item)
+        private object Activate_0_History() { return new global::Bitcoin.History(); }
+        private object Activate_3_ObservableDictionary() { return new global::Bitcoin.Common.ObservableDictionary(); }
+        private object Activate_8_TechnicalFeatures() { return new global::Bitcoin.TechnicalFeatures(); }
+        private object Activate_9_Graphic() { return new global::Bitcoin.Graphic(); }
+        private object Activate_10_HubPage() { return new global::Bitcoin.HubPage(); }
+        private object Activate_11_SectionPage() { return new global::Bitcoin.SectionPage(); }
+        private object Activate_12_ItemPage() { return new global::Bitcoin.ItemPage(); }
+        private void MapAdd_3_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -206,9 +212,11 @@ namespace Bitcoin.Bitcoin_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Bitcoin.Graphic
+            case 0:   //  Bitcoin.History
                 userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_Graphic;
+                userType.Activator = Activate_0_History;
+                userType.AddMemberName("DefaultViewModel");
+                userType.AddMemberName("NavigationHelper");
                 xamlType = userType;
                 break;
 
@@ -220,50 +228,64 @@ namespace Bitcoin.Bitcoin_XamlTypeInfo
                 xamlType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Bitcoin.HubPage
-                userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_HubPage;
-                userType.AddMemberName("NavigationHelper");
-                userType.AddMemberName("DefaultViewModel");
+            case 3:   //  Bitcoin.Common.ObservableDictionary
+                userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.DictionaryAdd = MapAdd_3_ObservableDictionary;
+                userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Bitcoin.Common.NavigationHelper
+            case 4:   //  Object
+                xamlType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  String
+                xamlType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Bitcoin.Common.NavigationHelper
                 userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Windows.UI.Xaml.DependencyObject
+            case 7:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  Bitcoin.Common.ObservableDictionary
-                userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_6_ObservableDictionary;
-                userType.SetIsReturnTypeStub();
+            case 8:   //  Bitcoin.TechnicalFeatures
+                userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_TechnicalFeatures;
+                userType.AddMemberName("DefaultViewModel");
+                userType.AddMemberName("NavigationHelper");
                 xamlType = userType;
                 break;
 
-            case 7:   //  Object
-                xamlType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 8:   //  String
-                xamlType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 9:   //  Bitcoin.SectionPage
+            case 9:   //  Bitcoin.Graphic
                 userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_SectionPage;
+                userType.Activator = Activate_9_Graphic;
+                xamlType = userType;
+                break;
+
+            case 10:   //  Bitcoin.HubPage
+                userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_HubPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 xamlType = userType;
                 break;
 
-            case 10:   //  Bitcoin.ItemPage
+            case 11:   //  Bitcoin.SectionPage
                 userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_ItemPage;
+                userType.Activator = Activate_11_SectionPage;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
+                xamlType = userType;
+                break;
+
+            case 12:   //  Bitcoin.ItemPage
+                userType = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_ItemPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 xamlType = userType;
@@ -273,32 +295,52 @@ namespace Bitcoin.Bitcoin_XamlTypeInfo
         }
 
 
-        private object get_0_HubPage_NavigationHelper(object instance)
+        private object get_0_History_DefaultViewModel(object instance)
+        {
+            var that = (global::Bitcoin.History)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_1_History_NavigationHelper(object instance)
+        {
+            var that = (global::Bitcoin.History)instance;
+            return that.NavigationHelper;
+        }
+        private object get_2_TechnicalFeatures_DefaultViewModel(object instance)
+        {
+            var that = (global::Bitcoin.TechnicalFeatures)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_3_TechnicalFeatures_NavigationHelper(object instance)
+        {
+            var that = (global::Bitcoin.TechnicalFeatures)instance;
+            return that.NavigationHelper;
+        }
+        private object get_4_HubPage_NavigationHelper(object instance)
         {
             var that = (global::Bitcoin.HubPage)instance;
             return that.NavigationHelper;
         }
-        private object get_1_HubPage_DefaultViewModel(object instance)
+        private object get_5_HubPage_DefaultViewModel(object instance)
         {
             var that = (global::Bitcoin.HubPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_2_SectionPage_NavigationHelper(object instance)
+        private object get_6_SectionPage_NavigationHelper(object instance)
         {
             var that = (global::Bitcoin.SectionPage)instance;
             return that.NavigationHelper;
         }
-        private object get_3_SectionPage_DefaultViewModel(object instance)
+        private object get_7_SectionPage_DefaultViewModel(object instance)
         {
             var that = (global::Bitcoin.SectionPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_4_ItemPage_NavigationHelper(object instance)
+        private object get_8_ItemPage_NavigationHelper(object instance)
         {
             var that = (global::Bitcoin.ItemPage)instance;
             return that.NavigationHelper;
         }
-        private object get_5_ItemPage_DefaultViewModel(object instance)
+        private object get_9_ItemPage_DefaultViewModel(object instance)
         {
             var that = (global::Bitcoin.ItemPage)instance;
             return that.DefaultViewModel;
@@ -311,40 +353,64 @@ namespace Bitcoin.Bitcoin_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "Bitcoin.History.DefaultViewModel":
+                userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.History");
+                xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Bitcoin.Common.ObservableDictionary");
+                xamlMember.Getter = get_0_History_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Bitcoin.History.NavigationHelper":
+                userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.History");
+                xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Bitcoin.Common.NavigationHelper");
+                xamlMember.Getter = get_1_History_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Bitcoin.TechnicalFeatures.DefaultViewModel":
+                userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.TechnicalFeatures");
+                xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Bitcoin.Common.ObservableDictionary");
+                xamlMember.Getter = get_2_TechnicalFeatures_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Bitcoin.TechnicalFeatures.NavigationHelper":
+                userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.TechnicalFeatures");
+                xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Bitcoin.Common.NavigationHelper");
+                xamlMember.Getter = get_3_TechnicalFeatures_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Bitcoin.HubPage.NavigationHelper":
                 userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.HubPage");
                 xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Bitcoin.Common.NavigationHelper");
-                xamlMember.Getter = get_0_HubPage_NavigationHelper;
+                xamlMember.Getter = get_4_HubPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Bitcoin.HubPage.DefaultViewModel":
                 userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.HubPage");
                 xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Bitcoin.Common.ObservableDictionary");
-                xamlMember.Getter = get_1_HubPage_DefaultViewModel;
+                xamlMember.Getter = get_5_HubPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Bitcoin.SectionPage.NavigationHelper":
                 userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.SectionPage");
                 xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Bitcoin.Common.NavigationHelper");
-                xamlMember.Getter = get_2_SectionPage_NavigationHelper;
+                xamlMember.Getter = get_6_SectionPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Bitcoin.SectionPage.DefaultViewModel":
                 userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.SectionPage");
                 xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Bitcoin.Common.ObservableDictionary");
-                xamlMember.Getter = get_3_SectionPage_DefaultViewModel;
+                xamlMember.Getter = get_7_SectionPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Bitcoin.ItemPage.NavigationHelper":
                 userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.ItemPage");
                 xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Bitcoin.Common.NavigationHelper");
-                xamlMember.Getter = get_4_ItemPage_NavigationHelper;
+                xamlMember.Getter = get_8_ItemPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Bitcoin.ItemPage.DefaultViewModel":
                 userType = (global::Bitcoin.Bitcoin_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Bitcoin.ItemPage");
                 xamlMember = new global::Bitcoin.Bitcoin_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Bitcoin.Common.ObservableDictionary");
-                xamlMember.Getter = get_5_ItemPage_DefaultViewModel;
+                xamlMember.Getter = get_9_ItemPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

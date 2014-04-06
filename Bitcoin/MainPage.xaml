@@ -10,8 +10,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
     <Page.Resources>
+        <!-- Collection of items displayed by this page -->
+        <CollectionViewSource
+            x:Name="itemsViewSource"
+            Source="{Binding Items}"
+            />
         <!-- Grid-appropriate 310 by 260 pixel item template as seen in section 4 -->
         <DataTemplate x:Key="Standard310x260ItemTemplate">
             <Grid Height="250" Width="310" Margin="5,10,5,10">
@@ -39,10 +43,12 @@
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
-        <Hub SectionHeaderClick="Hub_SectionHeaderClick_Articles">
+        <Image Margin="-90,71,-80,0" Source="Assets/bg.jpg" Stretch="Fill"/>
+        
+        <Hub SectionHeaderClick="Hub_SectionHeaderClick_Articles" FontFamily="Global User Interface">
             <Hub.Header>
                 <!-- Back button and page title -->
-                <Grid>
+                <Grid Margin="0,-20,0,20">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="80"/>
                         <ColumnDefinition Width="*"/>
@@ -54,44 +60,43 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-                    <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        VerticalAlignment="Top" IsHitTestVisible="false" TextWrapping="NoWrap" />
+                    <TextBlock x:Name="pageTitle" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        VerticalAlignment="Top" IsHitTestVisible="false" TextWrapping="NoWrap" Text="Биткойн" FontFamily="Georgia" />
                 </Grid>
             </Hub.Header>
-            <HubSection Width="780" Margin="0,0,80,0">
-                <HubSection.Background>
-                    <ImageBrush ImageSource="bitcoin2.jpg" Stretch="UniformToFill" />
-                </HubSection.Background>
-            </HubSection>
-            <HubSection Width="500" FontSize="14.667">
+
+            <HubSection Width="500" FontSize="14.667" Margin="30,0,0,0">
                 <DataTemplate>
                     <Grid Height="459">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition />
+                            <RowDefinition Height="0*"/>
                         </Grid.RowDefinitions>
 
-                        <RichTextBlock Style="{StaticResource BaseRichTextBlockStyle}" Grid.Row="1" Margin="0, 10, 0, 0">
-                            <Paragraph FontSize="19" FontFamily="Georgia" >
+                        <Image Margin="-25,-20,-20,-137" Grid.RowSpan="5" Source="Assets/bgdesc.png" Stretch="Fill"/>
+                        <TextBlock Text="Краткое описание" FontFamily="Georgia" FontSize="30" Margin="0,-25,0,0" ></TextBlock>
+                        <RichTextBlock Style="{StaticResource BaseRichTextBlockStyle}" Grid.Row="1" Margin="0,51,0,-126" Grid.RowSpan="4">
+                            <Paragraph FontSize="21.333" FontFamily="Georgia" TextAlignment="Justify" >
                                 <Run Text="Биткоин - это цифровая валюта, протокол и программное обеспечение, которые включают в себя"/>
                             </Paragraph>
-                            <Paragraph></Paragraph>
-                            <Paragraph FontSize="19" FontFamily="Georgia" >
+                            <Paragraph FontSize="21.333" FontFamily="Global User Interface"/>
+                            <Paragraph FontSize="21.333" FontFamily="Georgia" >
                                 <Run Text="• Мгновенные P2P транзакции"/>
                             </Paragraph>
-                            <Paragraph FontSize="19" FontFamily="Georgia">
+                            <Paragraph FontSize="21.333" FontFamily="Georgia">
                                 <Run Text="• Платежи по всему миру"/>
                             </Paragraph>
-                            <Paragraph FontSize="19" FontFamily="Georgia">
+                            <Paragraph FontSize="21.333" FontFamily="Georgia">
                                 <Run  Text="• Низкую / нулевую стоимость обработки   транзакций"/>
                             </Paragraph>
-                            <Paragraph FontSize="19" FontFamily="Georgia">
+                            <Paragraph FontSize="21.333" FontFamily="Georgia">
                                 <Run Text="• И многое другое"/>
                             </Paragraph>
-                            <Paragraph></Paragraph>
-                            <Paragraph FontSize="19" FontFamily="Georgia">
+                            <Paragraph FontSize="21.333" FontFamily="Global User Interface"/>
+                            <Paragraph FontSize="21.333" FontFamily="Georgia" TextAlignment="Justify">
                                 <Run Text="Bitcoin использует P2P технологию, функционирующую без центрального контролирующего органа или банка; обработка транзакций и эмиссия производятся коллективно, усилиями сети. Bitcoin имеет открытый код; его устройство открыто всем, никто не владеет и не контролирует Bitcoin. Благодаря своим уникальным свойствам, Bitcoin открывает новые горизонты возможностей, которые не предоставляла до этого ни одна платежная система."/>
                             </Paragraph>
                         </RichTextBlock>
@@ -99,43 +104,32 @@
                     </Grid>
                 </DataTemplate>
             </HubSection>
-            <HubSection Width="1365" Header="Новости">
-                <DataTemplate/>
-                
-            </HubSection>
             
-                 <HubSection IsHeaderInteractive="True" DataContext="{Binding Section3Items}" d:DataContext="{Binding Groups[3], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}"
-                         Header="Интересная информация о Bitcoin и криптовалюте" Padding="40,40,40,32" Width="1230">
+            <HubSection IsHeaderInteractive="True" DataContext="{Binding Section3Items}" d:DataContext="{Binding Groups[3], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}"
+                          Padding="40,40,40,32" Width="1065" FontFamily="Georgia">
                 <DataTemplate>
-                    <GridView
+                    <Grid >
+                        <Image Margin="-20,-50,-30,0" Source="Assets/bgdesc.png" Stretch="Fill"/>
+                        <TextBlock Margin="0,-25,0,0" Text="Интересная информация о Bitcoin и криптовалюте" FontSize="30" FontFamily="Georgia"></TextBlock>
+                        
+                        <GridView
                         x:Name="itemGridView"
                         ItemsSource="{Binding Items}"
-                        Margin="-9,-14,0,0"
+                        Margin="-10,20,0,0"
                         AutomationProperties.AutomationId="ItemGridView"
                         AutomationProperties.Name="Items In Group"
                         ItemTemplate="{StaticResource Standard310x260ItemTemplate}"
                         SelectionMode="None"
                         IsSwipeEnabled="false"
                         IsItemClickEnabled="True"
-                        ItemClick="ItemView_ItemClick">
-                    </GridView>
+                        ItemClick="ItemView_ItemClick"
+                            />
+                    </Grid>
                 </DataTemplate>
             </HubSection>
-            <HubSection Width="1380">
+            <HubSection Width="1100">
                 <DataTemplate>
-                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/market-price?show_header=false"/>
-                </DataTemplate>
-            </HubSection>
-
-          
-            <HubSection Width="1380">
-                <DataTemplate>
-                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://blockchain.info/ru/charts/total-bitcoins?show_header=false"/>
-                </DataTemplate>
-            </HubSection>
-            <HubSection Width="1380">
-                <DataTemplate>
-                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="1181" Source="http://cointory.com/all"/>
+                    <WebView x:Name="web" HorizontalAlignment="Left" Height="566" Margin="77,0,-795,0" Width="900" Source="http://blockchain.info/ru/charts/market-price?show_header=false"/>
                 </DataTemplate>
             </HubSection>
         </Hub>

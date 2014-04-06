@@ -1,5 +1,6 @@
 ﻿using Bitcoin.Common;
 using Bitcoin.Data;
+using RSSFeedReader.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -61,13 +62,13 @@ namespace Bitcoin
         /// The source of the event; typically <see cref="NavigationHelper"/>
         /// </param>
         /// <param name="e">Event data that provides both the navigation parameter passed to
-        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
+        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially request5ed and
         /// a dictionary of state preserved by this page during an earlier
         /// session.  The state will be null the first time a page is visited.</param>
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var item = await SampleDataSource.GetItemAsync((String)e.NavigationParameter);
+            var item = await SampleDataSource.GetGroupAsync((String)e.NavigationParameter);
             this.DefaultViewModel["Item"] = item;
         }
 

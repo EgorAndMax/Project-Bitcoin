@@ -1,1 +1,1 @@
-C:\Users\Егор\Desktop\Project-Bitcoin\Bitcoin\Bitcoin.csproj;neutral
+C:\Users\Максим\Pictures\Project-Bitcoin\Bitcoin\Bitcoin.csproj;neutral

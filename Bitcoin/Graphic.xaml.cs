@@ -24,7 +24,7 @@ namespace Bitcoin
     /// </summary>
     public sealed partial class Graphic : Page
     {
-        HubPage rootPage = HubPage.Current;
+        HubPage rootPage = (HubPage)Windows.UI.Xaml.Window.Current.Content;
         public Graphic()
         {
             this.InitializeComponent();
